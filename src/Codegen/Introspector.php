@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Spawnia\Sailor\Codegen;
 
+use GraphQL\Language\Printer;
 use GraphQL\Type\Introspection;
 use Spawnia\Sailor\EndpointConfig;
 
@@ -17,6 +18,13 @@ class Introspector
     public function __construct(EndpointConfig $endpointConfig)
     {
         $this->endpointConfig = $endpointConfig;
+    }
+
+    public function introspect(): void
+    {
+        $result = $this->fetch();
+
+        Printer::doPrint();
     }
 
     public function fetch()
