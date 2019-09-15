@@ -1,13 +1,13 @@
 <?php
 
+declare(strict_types=1);
 
 namespace Spawnia\Sailor\Testing;
 
-
 use GraphQL\GraphQL;
-use GraphQL\Type\Introspection;
-use GraphQL\Utils\BuildSchema;
 use Spawnia\Sailor\Response;
+use GraphQL\Utils\BuildSchema;
+use GraphQL\Type\Introspection;
 
 class MockIntrospectionResponse
 {
